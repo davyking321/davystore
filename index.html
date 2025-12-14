@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PORTFOLIO.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background-color: black;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        header {
+            width: 100%;
+            height: 130px;
+            background-color: black;
+        }
+
+        .logo {
+            color: white;
+            display: flex;
+            margin-left: 1%;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .lo {
+            color: blueviolet;
+            font-size: 35px;
+            margin-left: 20px;
+            padding-top: 7px;
+        }
+
+        .go {
+            font-size: 35px;
+            margin-top: 30px;
+        }
+
+        .links {
+            float: right;
+            position: relative;
+
+            top: -34%;
+            margin-right: 10%;
+        }
+
+        a:link {
+            color: white;
+            font-weight: bolder;
+            padding-right: 20px;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: blueviolet;
+            text-decoration: underline;
+        }
+
+        .intro {
+            width: 100%;
+            height: 385px;
+            margin-top: 1%;
+            background-repeat: no-repeat;
+            background-size: auto;
+        }
+
+        .intro p {
+            color: white;
+            margin-left: 3%;
+            margin-top: -32%;
+            position: relative;
+            font-weight: bolder;
+            font-size: 50px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .intro h1 {
+            color: white;
+            margin-left: 3%;
+            position: relative;
+            font-weight: bolder;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .intro .ex {
+            margin-left: 66%;
+            width: 360px;
+            height: 475px;
+            box-shadow: black;
+            margin-top: -27.5%;
+            border-radius: 6px;
+            opacity: 0;
+            visibility: hidden;
+            position: relative;
+            animation: img-animate 0.5s 0.5s ease forwards;
+            transform: translateY(100%);
+        }
+
+        @keyframes img-animate {
+            0% {
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(100%);
+            }
+
+            100% {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0%);
+            }
+        }
+
+        .intro img:nth-child(1) {
+            animation-delay: 0.5s;
+        }
+
+        .skill {
+            background-color: white;
+            width: 60%;
+            height: 300px;
+            border-radius: 7px;
+            margin-left: 20%;
+            margin-top: 2%;
+        }
+
+        .skill h3 {
+            font-weight: bolder;
+            font-size: 35px;
+            text-align: center;
+        }
+
+        .skill ol {
+            font-weight: bolder;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .skill li {
+            margin-top: 2%;
+        }
+
+        .see {
+            width: 100%;
+            height: 500px;
+            opacity: 0.6;
+            background-color: black;
+        }
+
+        .more {
+            width: 45%;
+            height: 550px;
+            margin-left: 45%;
+            background-color: white;
+            margin-top: -46%;
+        }
+
+        .add {
+            width: 60%;
+            height: 450px;
+            background-color: white;
+            color: black;
+            margin-left: 20%;
+            margin-top: 11%;
+            border-radius: 5px;
+
+        }
+
+        .add p {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bolder;
+            font-size: 20px;
+            margin-left: 4%;
+            margin-right: 2.5%;
+            margin-top: 2%;
+        }
+
+        .add h1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bolder;
+            font-size: 50px;
+            margin-left: 4%;
+            margin-right: 2.5%;
+        }
+
+        .live {
+            width: 60%;
+            height: 90px;
+            background-color: white;
+            border-radius: 7px;
+            margin-left: 20%;
+        }
+
+        .live p {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        section.testimonial {
+            width: 100%;
+            height: 330px;
+            padding-top: 30px;
+            border-bottom: 4px solid blueviolet;
+        }
+
+        .testimonial h2 {
+            text-align: center;
+            margin-top: 30px;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 30px;
+        }
+
+        .testimonial-container {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+        }
+
+        .testimonial-container .testimonial-cards {
+            width: 38%;
+            height: 170px;
+            display: inline-block;
+            background-color: blueviolet;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .testimonial-cards .user {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+        }
+
+        .testimonial-cards .user img {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+            border-radius: 7px;
+        }
+
+        .testimonial-cards .user-data .name {
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bolder;
+            font-size: 35px;
+        }
+
+        .testimonial-cards .meta-data {
+            font-weight: bolder;
+            font-size: 27px;
+        }
+
+        .testimonial-cards p {
+            font-size: 20px;
+        }
+
+        .end {
+            width: 100%;
+            height: 100px;
+        }
+
+        .end h2 {
+            margin-top: 1%;
+            font-weight: bolder;
+            font-size: 30px;
+            text-align: center;
+            color: white;
+            border-bottom: 4px solid blueviolet;
+        }
+
+        .sec {
+            width: 40%;
+            height: 200px;
+        }
+
+        .sec p {
+            font-size: 20px;
+            font-weight: bolder;
+            color: white;
+            text-align: center;
+        }
+
+        input[type=text] {
+            width: 300px;
+            height: 35px;
+            border-radius: 6px;
+            background-color: rgb(207, 198, 198);
+            margin-left: 5%;
+            margin-top: 3%;
+        }
+
+        input[type=number] {
+            background-color: rgb(207, 198, 198);
+            width: 300px;
+            height: 35px;
+            border-radius: 6px;
+            margin-top: 12%;
+            margin-left: 5%;
+
+        }
+
+        input[type=email] {
+            background-color: rgb(207, 198, 198);
+            width: 300px;
+            height: 35px;
+            border-radius: 6px;
+            margin-top: 12%;
+            margin-left: 5%;
+        }
+
+        .over {
+            width: 100%;
+            height: 30px;
+            margin-top: 24%;
+        }
+
+        .over p {
+            font-size: 27px;
+            font-weight: bolder;
+            margin-left: 25%;
+            margin-top: 5%;
+            color: white;
+        }
+
+        .block {
+            width: 55%;
+            height: 45%;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            margin-left: 43%;
+            margin-top: -6%;
+        }
+
+        .block ul {
+            font-weight: bolder;
+        }
+
+        .block .extra-links {
+            margin-top: -3%;
+            font-weight: bolder;
+            margin-left: 8%;
+        }
+
+        .block .extra-links h3 {
+            margin-left: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="lo">Davy</h1>
+            <h1 class="go">King</h1>
+        </div>
+        <span>
+            <div class="links">
+                <a href="home">Home</a>
+                <a href="about">About</a>
+                <a href="projects">Projects</a>
+                <a href="testimoinals">Testimonials</a>
+                <a href="contacts">Contacts</a>
+                <a href="experiences">Experiences</a>
+            </div>
+        </span>
+    </header>
+    <section class="intro">
+        <img class="see" src="mountains.jpg">
+        <p>Hi!<br> I'm David<br> Samson-Echenim</p>
+        <h1>I am an expert website developer and designer. My area of specialty is<br> in creating modern, responsive
+            and
+            practical websites.</h1>
+        <img class="ex" src="Myself.jpg">
+    </section>
+    <section class="add">
+        <p style="text-align: center; font-weight: bolder;font-size: 25px;">ABOUT MYSELF.</p>
+        <p>I have been in the website development field for about 5 years. Within that time, I have worked for several
+            high-end organisations and created websites that have met up with their expectations.</p>
+        <h1>Specialised in Every Aspect of Website Development.</h1>
+        <p>I also have experience in launching websites, as well as search engine optimisation, making the websites
+            visible on any browser. This, as well as other aspects of my expertise, makes me a fulfilled and
+            professional website developer. </p>
+    </section>
+    <section class="skill">
+        <h3>MY SKILLS</h3>
+        <ol>
+            <li>Front-End Development</li>
+            <li>SEO Basics</li>
+            <li>Core Technologies</li>
+            <li>Testing and Debugging</li>
+            <li>Web Performance Optimisation</li>
+        </ol>
+    </section>
+    <section class="live">
+        <p style="text-align: center; font-weight: bolder;font-size: 25px;">See My Work.</p>
+        <a style="color: blue;margin-left: 43%;" href="index2.html">Live Demo</a>
+    </section>
+    <section class="testimonial">
+        <h2>My Testimonials.</h2>
+        <div class="testimonial-container">
+            <div class="testimonial-cards">
+                <div class="user">
+                    <img src="jamiedimon.png" class="user">
+                    <div class="user-data">
+                        <div class="name">Jamie Dimon</div>
+                        <div class="meta-data">CEO, JPMorgan Chase.</div>
+                    </div>
+                </div>
+                <p>An efficient web developer that produces satisfactory results.</p>
+            </div>
+            <div class="testimonial-cards">
+                <div class="user">
+                    <img src="dalio.jpg" class="user">
+                    <div class="user-data">
+                        <div class="name">Ray Dalio</div>
+                        <div class="meta-data">CEO, Bridgewater Associates.</div>
+                    </div>
+                </div>
+                <p>He's quick-witted, reliable, disciplined, and never disappoints. </p>
+            </div>
+        </div>
+    </section>
+    <footer class="end">
+        <h2>GET IN TOUCH.</h2>
+        <footer class="sec">
+            <p>Fill the spaces. Do not write your email password.</p>
+            <input type="text" placeholder="Enter Full Name"><br>
+            <input type="number" name="user" placeholder="Enter Phone Number"><br>
+            <input type="email" placeholder="Enter Email">
+        </footer>
+        <div class="block ">
+            <div class="more-links">
+                <h3 style="margin-left: 23%;">Sitemap</h3>
+                <ul>
+                    <li><a>Sitemap</a></li>
+                    <li><a>Advertise.</a></li>
+                    <li><a>Privacy Policy</a></li>
+                    <li><a>Contact</a></li>
+                    <li><a>Explore</a></li>
+                </ul>
+            </div>
+            <div class="more-links">
+                <h3 style="margin-left: 37%;">More</h3>
+                <ul>
+                    <li><a>My Menu</a></li>
+                    <li><a>Reviews</a></li>
+                    <li><a>FAQs</a></li>
+                    <li><a>Contact</a></li>
+                    <li><a>Explore</a></li>
+                </ul>
+            </div>
+            <div class="extra-links">
+                <h3>Contact Me.</h3>
+                <div class="contact-list"><i class="fa fa-phone"></i> +2349064068722</div>
+                <div class="contact-list"><i class="fa fa-envelope"></i>info@myportfolio.com</div>
+                <div class="contact-list"><i class=i class="fa fa-map-marker" aria-hidden="true"></i>2, Fayemi Street,
+                    Ashimolowo, Ogun State, Nigeria.</div>
+            </div>
+        </div>
+    </footer>
+    <footer class="over">
+        <p>@2025. Samson-Echenim David. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

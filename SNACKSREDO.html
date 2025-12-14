@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Motor City Fries</title>
+  <style>
+    :root{
+      --orange:#f2994a;
+      --deep:#222;
+      --muted:#777;
+      --max-width:1100px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Montserrat,system-ui,Arial,sans-serif;margin:0;color:var(--deep);line-height:1.5}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max-width);margin:0 auto;padding:0 20px}
+
+    /* Header */
+    header{background:#fff;position:sticky;top:0;z-index:10;border-bottom:1px solid #eee}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{width:56px;height:56px}
+    .brand h1{font-family:'Playfair Display';margin:0;font-size:20px}
+    nav ul{display:flex;gap:18px;align-items:center;margin:0;padding:0;list-style:none}
+    .btn{background:var(--orange);color:white;padding:8px 14px;border-radius:6px;font-weight:600}
+
+    /* Hero */
+    .hero{background-image:"iscreamalot.jpg";background-size:cover;background-position:center;color:white}
+    .hero .overlay{background:linear-gradient(180deg,rgba(0,0,0,0.35),rgba(0,0,0,0.45));padding:84px 0}
+    .hero h2{font-family:'Playfair Display';font-size:36px;margin:0 0 12px}
+    .hero p{max-width:640px;margin:0 0 18px}
+
+    /* About */
+    .about{display:flex;gap:28px;align-items:center;padding:48px 0}
+    .about img{width:140px}
+    .about .text h3{margin-top:0}
+
+    /* Toppings / Menu cards */
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:24px 0}
+    .card{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 6px 18px rgba(15,15,15,0.06)}
+    .card img{width:100%;height:150px;object-fit:cover}
+    .card .card-body{padding:12px}
+    .muted{color:var(--muted);font-size:14px}
+
+    /* Testimonials */
+    .testimonials{background:#f7f7f7;padding:34px;border-radius:8px}
+    .testimonials .quote{padding:16px;background:white;border-radius:6px}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .gallery img{width:100%;height:100px;object-fit:cover;border-radius:6px}
+
+    /* Footer */
+    footer{background:#121212;color:#ddd;padding:28px 0;margin-top:30px}
+    footer .col{min-width:160px}
+
+    /* Responsive */
+    @media (max-width:800px){
+      .about{flex-direction:column;align-items:flex-start}
+      .hero h2{font-size:28px}
+      nav ul{display:none}
+      .mobile-nav{display:inline-block}
+      .gallery{grid-template-columns:repeat(3,1fr)}
+    }
+    @media (max-width:480px){
+      .gallery{grid-template-columns:repeat(2,1fr)}
+    }
+
+    /* small utilities */
+    .spacer{height:18px}
+    .center{text-align:center}
+    .muted-center{color:var(--muted);font-size:13px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="snackslogo.jpg" alt="logo"/>
+        <div>
+          <h1>Motor City Fries</h1>
+          <div style="font-size:12px;color:var(--muted)">Hot. Crispy. Legendary.</div>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#toppings">Toppings</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a class="btn" href="#order">Order Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="overlay">
+      <div class="container">
+        <h2>MOTOR CITY FRIES</h2>
+        <p>Hand-cut, double-fried fries with bold toppings and sauces. Fresh daily, served hot.</p>
+        <a class="btn" href="#menu">See Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section id="about" class="about">
+      <img src="snackslogo.jpg" alt="fries-logo"/>
+      <div class="text">
+        <h3>About Us</h3>
+        <p class="muted">Motor City Fries started as a passion project to make the crispiest, most flavourful fries in town. We source local potatoes and use a signature double-fry technique that gives the ideal crunch-to-fluff ratio.</p>
+        <p><a href="#menu" class="btn">Browse Our Menu</a></p>
+      </div>
+    </section>
+
+    <section id="toppings">
+      <h3>Our Toppings</h3>
+      <div class="cards">
+        <article class="card">
+          <img src="donuts.jpg" alt="cheese fries">
+          <div class="card-body">
+            <h4>Cheesy Melt</h4>
+            <p class="muted">A blanket of melted cheddar plus scallions and a smoky drizzle.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="pastries.jpg" alt="loaded fries">
+          <div class="card-body">
+            <h4>Loaded BBQ</h4>
+            <p class="muted">Pulled pork, BBQ sauce and crispy onions on top of golden fries.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="tacos.jpg" alt="spicy fries">
+          <div class="card-body">
+            <h4>Spicy Kick</h4>
+            <p class="muted">Sriracha mayo, jalapeños and a sprinkle of toasted sesame.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="menu">
+      <h3>Our Menu</h3>
+      <div class="cards">
+        <article class="card">
+          <img src="meat pies.jpg" alt="fries classic">
+          <div class="card-body">
+            <h4>Classic Fries</h4>
+            <p class="muted">Sea salt and house ketchup. Simplicity done right.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="tacoandpuree.jpg" alt="curly fries">
+          <div class="card-body">
+            <h4>Curly Fries</h4>
+            <p class="muted">Seasoned to perfection with our signature spice blend.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="snacksalot.jpg" alt="loaded">
+          <div class="card-body">
+            <h4>Fully Loaded</h4>
+            <p class="muted">Pick toppings: bacon, cheese, pulled pork, jalapeños.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="testimonials" style="padding:32px 0">
+      <h3>Our Testimonials</h3>
+      <div class="testimonials">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px">
+          <div class="quote">
+            <strong>Jessie R.</strong>
+            <p class="muted">"Best fries in the city — golden and addictive. The Spicy Kick is my go-to."</p>
+          </div>
+          <div class="quote">
+            <strong>Marcus L.</strong>
+            <p class="muted">"Great portion sizes, friendly service and delicious sauces."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:18px 0">
+      <h3 class="center">Get Inspired</h3>
+      <div class="gallery" aria-hidden="false">
+        <img src="icecheers.jpg" alt="">
+        <img src="snacksalot.jpg" alt="">
+        <img src="donuts.jpg" alt="">
+        <img src="creaminabowl.jpg" alt="">
+        <img src="tacos.jpg" alt="">
+        <img src="twocreams.jpg" alt="">
+        <img src="shawarma.jpg" alt="">
+        <img src="iscreamalot.jpg" alt="">
+      </div>
+    </section>
+
+    <section style="padding:18px 0">
+      <div style="background:var(--orange);padding:18px;border-radius:8px" class="center">
+        <h3 style="margin:0;color:white">News Letter</h3>
+        <p style="color:rgba(255,255,255,0.9)">Get monthly deals & updates</p>
+        <form onsubmit="event.preventDefault();alert('Thanks!')" style="display:flex;gap:8px;justify-content:center;max-width:600px;margin:12px auto">
+          <input type="email" placeholder="you@email.com" required style="flex:1;padding:10px;border-radius:6px;border:none;min-width:0">
+          <button class="btn">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-start">
+      <div class="col">
+        <strong>Motor City Fries</strong>
+        <p class="muted-center">© 2025 Motor City Fries — All rights reserved</p>
+      </div>
+      <div class="col">
+        <h4 style="margin:0 0 8px 0">Quick Links</h4>
+        <ul style="list-style:none;padding:0;margin:0;color:var(--muted)">
+          <li>Menu</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <div class="col" style="margin-left:auto;text-align:right">
+        <h4 style="margin:0 0 8px 0">Contact</h4>
+        <div class="muted-center">hello@motorcityfries.example<br/>+1 (555) 123-4567</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // small helper: smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',function(e){
+        var target = document.querySelector(this.getAttribute('href'))
+        if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'})}
+      })
+    })
+  </script>
+</body>
+</html>
