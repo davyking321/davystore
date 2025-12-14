@@ -7,9 +7,30 @@
     <title>MY PORTFOLIO.</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+        *{
+            box-sizing: border-box;
+        }
         body {
+            margin: 0;
             background-color: black;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .container{
+            max-width: 1000px;
+            margin: auto;
+            padding: 15px;
+        }
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+        @media(max-width: 768px) {
+            nav{
+                flex-direction: column;
+            }
+            .columns{
+                flex-direction: column;
+            }
         }
 
         header {
@@ -468,5 +489,6 @@
         <p>@2025. Samson-Echenim David. All rights reserved.</p>
     </footer>
 </body>
+
 
 </html>
