@@ -111,11 +111,10 @@
 
         .intro .ex {
             margin-left: 66%;
-            width: 360px;
+            width: 330px;
             height: auto;
             box-shadow: black;
             margin-top: -27.5%;
-            border-radius: 6px;
             opacity: 0;
             visibility: hidden;
             position: relative;
@@ -308,17 +307,25 @@
 
         input[type=text] {
             width: 300px;
-            height: 35px;
+            height: auto;
             border-radius: 6px;
             background-color: rgb(207, 198, 198);
             margin-left: 5%;
             margin-top: 3%;
         }
-
+        in {
+            width: 300px;
+            height: 70px;
+            border-radius: 6px;
+            background-color: rgb(207, 198, 198);
+            margin-left: 5%;
+            margin-top: 3%;
+        } 
+        
         input[type=number] {
             background-color: rgb(207, 198, 198);
             width: 300px;
-            height: 35px;
+            height: auto;
             border-radius: 6px;
             margin-top: 12%;
             margin-left: 5%;
@@ -328,12 +335,13 @@
         input[type=email] {
             background-color: rgb(207, 198, 198);
             width: 300px;
-            height: 35px;
+            height: auto;
             border-radius: 6px;
             margin-top: 12%;
             margin-left: 5%;
         }
 
+        
         .over {
             width: 100%;
             height: 35px;
@@ -457,6 +465,7 @@
             <input type="text" placeholder="Enter Full Name"><br>
             <input type="number" name="user" placeholder="Enter Phone Number"><br>
             <input type="email" placeholder="Enter Email">
+            <input class="in" type="text" placeholder="Description">
         </footer>
         <div class="block ">
             <div class="more-links">
@@ -494,4 +503,5 @@
 </body>
     
 </html>
+
 
